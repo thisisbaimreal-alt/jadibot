@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>JadiBot — Buat Bot dengan Mudah</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--line:#26324b;--text:#f4f7ff;--muted:#a5b2ca;--green:#61e6a6;--blue:#8ba7ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#182b46 0,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-weight:850;font-size:1.35rem;letter-spacing:-.6px}.brand span{color:var(--green)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.94rem}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:12px 18px;font-weight:750;cursor:pointer;background:var(--green);color:#082016;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.04)}.btn.secondary{background:#202c44;color:var(--text);border:1px solid #34415b}.hero{padding:70px 0 58px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid #2b5949;background:#102b25;color:var(--green);padding:6px 11px;border-radius:99px;font-size:.82rem;font-weight:700}.dot{width:7px;height:7px;background:var(--green);border-radius:50%}h1{font-size:clamp(2.7rem,5.5vw,4.8rem);line-height:1.05;letter-spacing:-2.5px;margin:22px 0}h1 em{font-style:normal;color:var(--green)}.lead{font-size:1.1rem;color:var(--muted);max-width:560px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 18px}.small{font-size:.83rem;color:var(--muted)}.preview{border:1px solid #34415b;background:linear-gradient(145deg,#17243a,#101827);border-radius:24px;padding:22px;box-shadow:0 25px 70px #0005;transform:rotate(1deg)}.previewtop{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}.live{color:var(--green);font-size:.78rem}.botrow{display:flex;align-items:center;gap:13px;padding:18px 0}.avatar{height:45px;width:45px;border-radius:14px;display:grid;place-items:center;background:#1e3b36;font-size:1.4rem}.botname{font-weight:800}.sub{font-size:.82rem;color:var(--muted)}.status{margin-left:auto;font-size:.75rem;color:var(--green);background:#14362c;padding:5px 9px;border-radius:99px}.statgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{padding:15px;background:#0d1526;border:1px solid var(--line);border-radius:14px}.stat strong{display:block;font-size:1.5rem}.stat span{font-size:.82rem;color:var(--muted)}.section{padding:62px 0}.sectionhead{text-align:center;max-width:650px;margin:0 auto 32px}.sectionhead h2{font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-1px;line-height:1.15;margin:0 0 12px}.sectionhead p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px}.icon{width:45px;height:45px;display:grid;place-items:center;border-radius:13px;background:#1d2b40;font-size:1.35rem}.card h3{margin:16px 0 7px}.card p{margin:0;color:var(--muted);font-size:.94rem}.builder{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.formbox,.resultbox{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}.formbox h3,.resultbox h3{margin-top:0}.field{margin:17px 0}.field label{display:block;font-size:.9rem;font-weight:700;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;padding:12px 13px;background:#0b1221;color:var(--text);border:1px solid #34415b;border-radius:10px;font:inherit;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}.check{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.85rem;margin:14px 0}.check input{margin-top:5px;accent-color:var(--green)}.resultbox{min-height:100%}.empty{border:1px dashed #3b4962;border-radius:14px;padding:25px;text-align:center;color:var(--muted);margin-top:16px}.result{display:none}.result code{display:block;white-space:pre-wrap;overflow-wrap:anywhere;background:#0b1221;padding:14px;border-radius:10px;color:#b9f5d5;font-size:.85rem}.notice{padding:12px 14px;background:#2a2417;border:1px solid #66532c;border-radius:12px;color:#f4dba0;font-size:.85rem;margin-top:14px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.stepnum{color:var(--green);font-size:.8rem;font-weight:850;letter-spacing:1px}.cta{padding:36px;border-radius:22px;border:1px solid #315344;background:linear-gradient(120deg,#102b25,#14233b);display:flex;align-items:center;justify-content:space-between;gap:20px}.cta h2{margin:0 0 6px}.cta p{margin:0;color:var(--muted)}footer{border-top:1px solid var(--line);margin-top:55px;padding:25px 0;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.mobilemenu{display:none}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:42px;gap:30px}.preview{transform:none}.cards,.steps{grid-template-columns:1fr}.builder{grid-template-columns:1fr}.navlinks{display:none}.cta{align-items:flex-start;flex-direction:column}h1{letter-spacing:-1.6px}.section{padding:45px 0}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#">Jadi<span>Bot</span> ✳</a>
+  <nav class="navlinks"><a href="#fitur">Fitur</a><a href="#cara-kerja">Cara kerja</a><a href="#buat">Buat bot</a></nav>
+  <a class="btn secondary" href="#buat">Mulai gratis ↗</a>
+</header>
+<main>
+<section class="wrap hero">
+  <div>
+    <div class="badge"><span class="dot"></span> Platform bot untuk semua orang</div>
+    <h1>Ide kamu.<br><em>Bot kamu.</em><br>Semudah itu.</h1>
+    <p class="lead">Mulai rancang bot sendiri tanpa harus jadi ahli coding. Atur nama, pilih platform, dan siapkan konfigurasi bot dari satu tempat.</p>
+    <div class="actions"><a class="btn" href="#buat">✦ Buat bot sekarang</a><a class="btn secondary" href="#fitur">Pelajari fitur ↓</a></div>
+    <p class="small">Gratis untuk mulai · Ramah pemula · Bisa dikembangkan</p>
+  </div>
+  <div class="preview" aria-label="Contoh dashboard bot">
+    <div class="previewtop"><strong>▣ Dashboard bot</strong><span class="live">● DEMO</span></div>
+    <div class="botrow"><div class="avatar">🤖</div><div><div class="botname">Bot Pertamaku</div><div class="sub">Asisten otomatis pribadi</div></div><span class="status">Konsep</span></div>
+    <div class="statgrid"><div class="stat"><strong>24/7</strong><span>Siap membantu</span></div><div class="stat"><strong>3 langkah</strong><span>Untuk mulai</span></div><div class="stat"><strong>Tanpa ribet</strong><span>Alur sederhana</span></div><div class="stat"><strong>Fleksibel</strong><span>Pilih kebutuhanmu</span></div></div>
+    <p class="small" style="margin:16px 2px 0">Tampilan contoh — bukan statistik layanan aktif.</p>
+  </div>
+</section>
+<section class="section" id="fitur"><div class="wrap">
+  <div class="sectionhead"><h2>Semua yang kamu butuhkan untuk mulai</h2><p>Dirancang supaya siapa pun bisa memulai dari ide sederhana.</p></div>
+  <div class="cards">
+    <article class="card"><div class="icon">🧩</div><h3>Mudah disiapkan</h3><p>Isi informasi dasar bot lewat formulir sederhana, tanpa perlu menyentuh kode untuk membuat konsep awal.</p></article>
+    <article class="card"><div class="icon">⚙️</div><h3>Fleksibel</h3><p>Pilih platform dan tujuan bot yang sesuai dengan kebutuhan komunitas, belajar, atau bisnis kecil.</p></article>
+    <article class="card"><div class="icon">🛡️</div><h3>Utamakan keamanan</h3><p>Jaga token, kata sandi, dan data pengguna. Jangan pernah membagikan kredensial rahasia di halaman publik.</p></article>
+  </div>
+</div></section>
+<section class="section" id="cara-kerja"><div class="wrap">
+  <div class="sectionhead"><h2>Dari ide menjadi konfigurasi</h2><p>Mulai dari hal kecil, lalu kembangkan saat sudah siap.</p></div>
+  <div class="steps">
+    <article class="card"><div class="stepnum">LANGKAH 01</div><h3>Isi detail bot</h3><p>Tentukan nama, platform, dan fungsi utama bot yang ingin kamu buat.</p></article>
+    <article class="card"><div class="stepnum">LANGKAH 02</div><h3>Buat rancangan</h3><p>JadiBot menyiapkan ringkasan konfigurasi yang bisa kamu simpan atau salin.</p></article>
+    <article class="card"><div class="stepnum">LANGKAH 03</div><h3>Hubungkan layanan</h3><p>Untuk menjalankan bot sungguhan, sambungkan backend dan API resmi platform pilihanmu.</p></article>
+  </div>
+</div></section>
+<section class="section" id="buat"><div class="wrap">
+  <div class="sectionhead"><h2>Rancang bot pertamamu</h2><p>Formulir ini berjalan di browser dan menghasilkan rancangan lokal. Belum mengaktifkan bot sungguhan.</p></div>
+  <div class="builder">
+    <form class="formbox" id="botForm">
+      <h3>Detail bot</h3>
+      <div class="field"><label for="botName">Nama bot</label><input id="botName" maxlength="50" placeholder="Contoh: Asisten Toko" required></div>
+      <div class="field"><label for="platform">Platform tujuan</label><select id="platform"><option>Telegram</option><option>WhatsApp Business Platform</option><option>Discord</option><option>Website / Live Chat</option><option>Lainnya</option></select></div>
+      <div class="field"><label for="purpose">Fungsi bot</label><select id="purpose"><option>Menjawab pertanyaan umum</option><option>Layanan pelanggan</option><option>Informasi komunitas</option><option>Pengingat dan notifikasi</option><option>Pembelajaran</option><option>Lainnya</option></select></div>
+      <div class="field"><label for="description">Deskripsi singkat</label><textarea id="description" rows="3" maxlength="300" placeholder="Bot ini akan membantu pengguna untuk..."></textarea></div>
+      <label class="check"><input type="checkbox" id="agree" required><span>Saya memahami bahwa ini hanya membuat rancangan konfigurasi, bukan menghubungkan atau menjalankan bot otomatis.</span></label>
+      <button class="btn" type="submit" style="width:100%">Buat rancangan bot ✦</button>
+    </form>
+    <div class="resultbox"><h3>Hasil rancangan</h3><p class="sub">Rancanganmu akan muncul di sini. Tidak ada data yang dikirim ke server.</p>
+      <div class="empty" id="empty">🤖<br><strong>Bot kamu dimulai di sini</strong><br><span class="small">Lengkapi formulir lalu tekan “Buat rancangan bot”.</span></div>
+      <div class="result" id="result"><p><strong id="outTitle"></strong></p><code id="outCode"></code><button type="button" class="btn secondary" id="copy" style="margin-top:12px">Salin rancangan</button><button type="button" class="btn secondary" id="download" style="margin:12px 0 0 8px">Unduh JSON</button><div class="notice">Agar bot aktif untuk publik, diperlukan server/backend, integrasi resmi platform, pengamanan kredensial, dan pengujian. Jangan menaruh token API di kode frontend.</div></div>
+    </div>
+  </div>
+</div></section>
+<section class="wrap"><div class="cta"><div><h2>Siap mulai dari ide kamu?</h2><p>Buat rancangan pertama, lalu kembangkan sesuai kebutuhan.</p></div><a class="btn" href="#buat">Mulai buat bot ↑</a></div></section>
+</main>
+<footer class="wrap"><span>© 2026 JadiBot · Dibuat untuk semua orang.</span><span>Demo awal · Belum terhubung ke layanan bot eksternal.</span></footer>
+<script>
+let currentConfig=null;
+document.getElementById('botForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ currentConfig={
+  nama:document.getElementById('botName').value.trim(),
+  platform:document.getElementById('platform').value,
+  fungsi:document.getElementById('purpose').value,
+  deskripsi:document.getElementById('description').value.trim(),
+  status:'rancangan_belum_aktif',
+  dibuat_pada:new Date().toISOString()
+ };
+ document.getElementById('outTitle').textContent=currentConfig.nama;
+ document.getElementById('outCode').textContent=JSON.stringify(currentConfig,null,2);
+ document.getElementById('empty').style.display='none';
+ document.getElementById('result').style.display='block';
+});
+document.getElementById('copy').addEventListener('click',async()=>{
+ if(!currentConfig)return;
+ const btn=document.getElementById('copy');
+ try{await navigator.clipboard.writeText(JSON.stringify(currentConfig,null,2));btn.textContent='Tersalin ✓';}
+ catch(e){btn.textContent='Gagal menyalin';}
+ setTimeout(()=>btn.textContent='Salin rancangan',1800);
+});
+document.getElementById('download').addEventListener('click',()=>{
+ if(!currentConfig)return;
+ const blob=new Blob([JSON.stringify(currentConfig,null,2)],{type:'application/json'});
+ const url=URL.createObjectURL(blob);const a=document.createElement('a');
+ a.href=url;a.download='rancangan-jadibot.json';a.click();URL.revokeObjectURL(url);
+});
+</script>
+</body>
+</html>
